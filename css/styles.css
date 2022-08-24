@@ -9,8 +9,11 @@
   --accent-color:#2196f3;
 /* text colors */
   --logo-text-color:#939393;
-  --primry-text-color:rgba(143, 149, 165, 1);
+  --primry-text-color:#8f95a5;
   --secondary-text-button-bg-color:#263238;
+  --about-us-text-color:#2a3246;
+  /* timing function */
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body{
@@ -39,6 +42,15 @@ img {
   padding-right: 15px;
 
   width: 1378px;
+}
+.section-title {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.5;
+  color: var(--primary-black-color);
+
 }
 /* Header */
 .header {
@@ -80,9 +92,11 @@ img {
   font-size: 20px;
   line-height: 1.5;
   color: var(--secondary-text-button-bg-color);
+  transition: color 250ms var(--timing-function);
 }
 .main-nav-link.current {
   color: var(--accent-color);
+  transition: color 250ms var(--timing-function);
 }
 .header-button {
   border: 2px solid var(--secondary-text-button-bg-color);
@@ -99,6 +113,8 @@ img {
   letter-spacing: 0.03em;
   cursor: pointer;
   color: var(--primary-black-color);
+  transition: background-color 250ms var(--timing-function),
+  color 250ms var(--timing-function);
 }
 .main-nav-link:hover,
 .main-nav-link:focus {
@@ -109,7 +125,14 @@ img {
   background-color: var(--secondary-text-button-bg-color);
   color: var(--primary-white-color);
 }
+.main-nav-link.current:hover,
+.main-nav-link.current:focus {
+  color: var(--secondary-text-button-bg-color);
+}
 /* Hero */
+.hero {
+  margin-bottom: 180px;
+}
 .hero-container {
   display: flex;
 }
@@ -145,12 +168,15 @@ img {
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function),
+  color 250ms var(--timing-function);
 }
 .hero-icon {
   position: absolute;
   right: 0;
   top: 15%;
   cursor: grab;
+  transition: fill 400ms var(--timing-function);
 }
 .hero-icon:hover{
   fill: yellow;
@@ -162,4 +188,47 @@ img {
 .hero-button:focus {
   background-color: var(--primary-bg-color);
   color: var(--primary-black-color);
+}
+/* Skils */
+.skills-title {
+  text-align: center;
+}
+
+
+
+/* about us */
+.about.container {
+  display: flex
+}
+.about-title-container {
+  width: 652px;
+  margin-right: 146px;
+}
+.section-title {
+  margin-bottom: 60px;
+}
+
+.about-us-discription {
+  margin: 0px 0px 30px 0px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--primry-text-color);
+}
+.example-list {
+  display: flex;
+}
+.example-amount {
+  text-align: center;
+  margin: 0px 0px 6px 0px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.5px;
+  color: var(--about-us-text-color);
+}
+.example-discription{
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
 }
