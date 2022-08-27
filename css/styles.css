@@ -3,6 +3,8 @@
   --primary-bg-color:#E5E5E5;
   --secondary-bg-color:#F5F5F5;
   --price-button-bg-color:#EEEEEE;
+  /* border color */
+  --border-color:#C4C4C4;
 /* colors */
   --primary-black-color:#000000;
   --primary-white-color:#fff;
@@ -12,8 +14,12 @@
   --primry-text-color:#8f95a5;
   --secondary-text-button-bg-color:#263238;
   --about-us-text-color:#2a3246;
+  --price-text-color:#546269;
   /* timing function */
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /* shadow */
+  --card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 body{
@@ -158,6 +164,7 @@ img {
 .hero-button{
   width: 426px;
   min-height: 100px;
+  border: 3px solid var(--secondary-text-button-bg-color);
   border-radius: 10px;
   background-color: var(--secondary-text-button-bg-color);
   font-family: inherit;
@@ -190,13 +197,76 @@ img {
   color: var(--primary-black-color);
 }
 /* Skils */
+.skills {
+  margin-bottom: 180px;
+}
 .skills-title {
   text-align: center;
 }
-
-
+.skills-list-item {
+  border-radius: 10px;
+  width: 426px;
+  background-color: var(--secondary-bg-color);
+}
+.speaking {
+  padding: 32px 27px 0px 9px;
+}
+.speaking-title-container {
+  padding: 24px 43px 154px 0px;
+}
+.writing {
+  padding: 32px 18px 32px 18px;
+}
+.writing-title-container {
+  padding-top: 24px;
+  padding-right: 50px;
+}
+.reading {
+  padding: 33px 18px 32px 18px;
+}
+.reading-title-container {
+  padding-top: 23px;
+  padding-right: 50px;
+}
+.skills-list-title{
+  margin: 0px 0px 20px 0px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.5;
+  color: var(--secondary-text-button-bg-color);
+}
+.skills-discription{
+  margin: 0px 0px 30px 0px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.skills-button {
+  border: 3px solid var(--secondary-text-button-bg-color);
+  border-radius: 10px;
+  padding: 0;
+  width: 230px;
+  min-height: 60px;
+  background-color: var(--secondary-text-button-bg-color);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  color: var(--primary-white-color);
+  transition: background-color 250ms var(--timing-function),
+  color 250ms var(--timing-function);
+}
+.skills-button:hover {
+  background-color: var(--primary-bg-color);
+  color: var(--secondary-text-button-bg-color);
+}
 
 /* about us */
+.about-us {
+  margin-bottom: 180px;
+}
 .about.container {
   display: flex
 }
@@ -231,4 +301,105 @@ img {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
+}
+
+/* Pricing */
+.pricing{
+  margin-bottom: 180px;
+}
+.pricing-title {
+  text-align: center;
+}
+.pricing-list{
+  display: flex;
+  gap: 30px;
+}
+
+.pricing-list-item {
+  min-height: 584px;
+  width: 426px;
+  padding: 10px;
+}
+.pricing-img {
+  margin-bottom: 31px;
+}
+
+.pricing-title {
+  margin: 0px 0px 60px 0px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.6;
+  text-transform: capitalize;
+  color: var(--secondary-text-button-bg-color);
+}
+.pricing-description {
+  margin: 0px 0px 30px 0px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.pricing-price {
+  display: block;
+  border-radius: 5px;
+  width: 260px;
+  padding: 5px 23px;
+  margin: 0px 28px 0px 0px;
+  background-color: var(--price-button-bg-color);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--secondary-text-button-bg-color);
+}
+.price-discription {
+  margin-left: 28px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--price-text-color);
+}
+.pricing-description.small-box {
+  margin-bottom: 59px;
+}
+
+/* Contact */
+.contact {
+ margin-bottom: 50px;
+}
+.contact-container {
+  display: flex;
+}
+
+.contact-img-container {
+margin-right: 144px;
+}
+.contacts-discription {
+  display: block;
+  width: 654px;
+  margin: 0px 0px 30px 0px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--primry-text-color);
+}
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border-color);
+  padding: 20px;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+.footer-discription {
+  margin-left: auto;
+}
+.footer-discription-list {
+  margin-left: auto;
+  display: flex;
+  gap: 80px;
+}
+.footer-discription-text {
+  margin: 0;
 }
