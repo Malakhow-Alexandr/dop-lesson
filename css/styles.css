@@ -325,9 +325,6 @@ img {
 }
 
 /* Pricing */
-.pricing{
-  margin-bottom: 180px;
-}
 .pricing-title {
   text-align: center;
 }
@@ -385,24 +382,108 @@ img {
 }
 
 /* Contact */
-.contact {
- margin-bottom: 50px;
+.form {
+    padding: 130px 0px;
 }
-.contact-container {
+.form__container {
+    display: flex;
+}
+.form__meta-container {
+    margin-left: 104px;
+    padding-top: 30px;
+    width: 776px;
+}
+.form__title {
+    margin-bottom: 37px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: calc(80 / 48);
+    color: var(--primary-black-color); 
+}
+.form__meta {
+    margin-bottom: 52px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(30 / 20);
+    color: var(--primry-text-color); 
+} 
+.form__group {
   display: flex;
+  position: relative;
 }
-
-.contact-img-container {
-margin-right: 144px;
-}
-.contacts-discription {
-  display: block;
-  width: 654px;
-  margin: 0px 0px 30px 0px;
+.form__lable {
+  position: absolute;
+  top: 50%;
+  left: 33px;
+  transform: translateY(-50%);
+  font-family: 'Poppins';
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: calc(24 / 16);
   color: var(--primry-text-color);
+  transition: transform 250ms var(--timing-function);
+}
+.form__input {
+    width: 450px;
+    min-height: 80px;
+    padding: 33px;
+    border: 1px solid var(--primry-text-color);
+    border-radius: 10px;
+    margin-right: 12px;
+}
+.form__input:focus + .form__lable,
+.form__input:not(:placeholder-shown) + .form__lable {
+    transform: translateY(-270%);
+    color: var(--accent-color);
+}
+.form__input:focus,
+.form__input:not(:placeholder-shown) {
+    border-color: var(--accent-color);
+}
+.form__input:focus-visible{
+    outline: none;
+}
+.form__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 264px;
+    min-height: 80px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: var(--secondary-text-button-bg-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--primary-white-color);
+    cursor: pointer;
+    transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    border 250ms var(--timing-function);
+}
+.form__button:hover,
+.form__button:focus {
+    background-color: var(--logo-text-color);
+    border: 2px solid var(--black-text);
+    color: var(--primary-black-color);
+
+}
+.form__button::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 30px;
+    background-image: url(../images/bulb-icon.png);
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 250ms var(--timing-function);
+}
+.form__button:hover::before,
+.form__button:focus::before {
+    opacity: 1;
 }
 /* Footer */
 .footer {
